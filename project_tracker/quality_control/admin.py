@@ -7,7 +7,7 @@ class BugReportAdmin(admin.ModelAdmin):
     list_filter = ('project', 'priority', 'status')
     search_fields = ('title', 'description')
     list_editable = ('status',)
-    readonly_fields = ('project', 'task', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
 
 @admin.register(FeatureRequest)
 class FeatureRequestAdmin(admin.ModelAdmin):
@@ -15,4 +15,4 @@ class FeatureRequestAdmin(admin.ModelAdmin):
     list_filter = ('project', 'priority', 'status')
     search_fields = ('title', 'description')
     list_editable = ('status',)
-    readonly_fields = ('project', 'task', 'created_at', 'updated_at')
+    readonly_fields = ('created_at', 'updated_at')
