@@ -1,7 +1,11 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+    <br>
+    <a href="{% url 'tasks:update_task' project_id=task.project.id task_id=task.id %}">Изменить задачу</a>
+    <br>
+    <a href="{% url 'tasks:delete_task' project_id=task.project.id task_id=task.id %}" onclick="return confirm('Вы уверены, что хотите удалить эту задачу?');">Удалить задачу</a>
+
     <h1>{{ task.name }}</h1>
     <p>{{ task.description }}</p>
-
 {% endblock %}
