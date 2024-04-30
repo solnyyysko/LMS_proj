@@ -19,6 +19,7 @@ urlpatterns = [
             [
                 path('', views.bugs_list, name='bugs_list'),
                 path('<int:bug_id>/', views.BugReportDetailView.as_view(), name='bug_detail'),
+                path('new/', views.create_bug_report, name='create_bug_report'),
             ]
         ),
     ),
@@ -28,6 +29,7 @@ urlpatterns = [
             [
                 path('', views.features_list, name='features_list'),
                 path('<int:feature_id>/', views.FeatureRequestDetailView.as_view(), name='feature_detail'),
+                path('new/', views.create_feature_request, name='create_feature_request'),
             ]
         ),
     ),
